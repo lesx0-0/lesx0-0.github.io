@@ -1,0 +1,101 @@
+﻿/* Alapstílusok */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #c3d9e3;
+    color: white; /* A szöveg fehér színű legyen, hogy jól olvasható legyen fekete háttéren */
+}
+
+.container {
+    color: black;
+    width: 90%;
+    max-width: 2200px;
+    margin: 0 auto;
+}
+
+/* Fejléc */
+header {
+    background-color: #546988;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+/* Tartalom */
+main {
+    padding: 40px 0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #8095a0; /* A kártyák háttérszíne */
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ccc; /* Képzeljünk el egy szürke keretet a kártyák körül */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover hatásra erősebb árnyék */
+    }
+
+    .card h2 {
+        margin-top: 10px;
+        color: #333;
+    }
+
+    .card p {
+        color: #666;
+    }
+
+/* Kép stílusok */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Kép kitöltése a rendelkezésre álló helyen */
+    border-radius: 8px;
+    margin-bottom: 20px; /* Kép és a szöveg közötti távolság */
+}
+
+/* Lábléc */
+footer {
+    background-color: #546988;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    footer p {
+        font-size: 1em;
+    }
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
